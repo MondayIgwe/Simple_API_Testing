@@ -3,12 +3,18 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/migwe/IdeaProjects/SimpleApiAutomation">
         <classes>
-            <class name="ExampleOne">
+            <class name="testSuite.ExampleOne">
                 <methods>
                     <include name="getCall"/>
                     <include name="postCall"/>
                     <include name="putCall"/>
                     <include name="deleteCall"/>
+                </methods>
+            </class>
+            <class name="testSuite.ExampleTwo">
+                <methods>
+                    <include name="getUsersByQuery"/>
+                    <include name="getGoogleCookie"/>
                 </methods>
             </class>
         </classes>
