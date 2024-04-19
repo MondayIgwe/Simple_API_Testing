@@ -1,6 +1,6 @@
 Simple Rest-Assured API Automation Testing Framework
 
-Example API: https://jsonplaceholder.typicode.com/
+Example API: https://reqres.in/
 
 Rest-Assured Test case structure:
 ========================================
