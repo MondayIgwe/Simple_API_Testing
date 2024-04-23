@@ -8,7 +8,35 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "dump github context"
-        run: echo '${{ toJSON(github.event) | jq
+        run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
-    
-    
+  job2:
+    - name: Create comment
+      uses: peter-evans/create-or-update-comment@v4
+      with:
+        issue-number: 1
+        body: |
+          This is a multi-line test comment
+          - With GitHub **Markdown** :sparkles:
+          - Created by [create-or-update-comment][1]
+          
+          [1]: https://github.com/peter-evans/create-or-update-comment
+        reactions: '+1'
+  job3:
+    - name: Update comment
+      uses: peter-evans/create-or-update-comment@v4
+      with:
+        comment-id: 557858210
+        body: |
+          **Edit:** Some additional info
+        reactions: eyes
+
+  job4:
+    - name: Add reactions
+      uses: peter-evans/create-or-update-comment@v4
+      with:
+        comment-id: 557858210
+        reactions: |
+          heart
+          hooray
+          laugh
