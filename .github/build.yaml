@@ -1,6 +1,5 @@
 name: Hello World workflow CICD
 
-# Events
 on:
   push:
     branches:
@@ -10,7 +9,6 @@ on:
       - main
   workflow_dispatch:
 
-#jobs
 jobs:
   hello_runner_one_example:
     runs-on: ubuntu-latest
