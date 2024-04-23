@@ -10,7 +10,8 @@ jobs:
       - name: "dump github context"
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
-  job2:
+
+  create-comment:
     - name: Create comment
       uses: peter-evans/create-or-update-comment@v4
       with:
@@ -22,7 +23,8 @@ jobs:
           
           [1]: https://github.com/peter-evans/create-or-update-comment
         reactions: '+1'
-  job3:
+
+  update-comment:
     - name: Update comment
       uses: peter-evans/create-or-update-comment@v4
       with:
@@ -31,7 +33,7 @@ jobs:
           **Edit:** Some additional info
         reactions: eyes
 
-  job4:
+  add-reactions:
     - name: Add reactions
       uses: peter-evans/create-or-update-comment@v4
       with:
